@@ -30,7 +30,6 @@ public class Main {
     private static Map<String, Command> generateCommands() throws IOException {
         Map<String, Command> commands = new HashMap<>();
         commands.put("exchange rate", new ExchangeCommand(frame.getMoneyDialog(), frame.getMoneyDisplay(),
-//                new MockExchangeRateLoader(currencies).load()));
                         new CustomExchangeRateLoader(currencies).load()));
         return commands;
     }
